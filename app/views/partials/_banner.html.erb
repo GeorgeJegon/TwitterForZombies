@@ -1,0 +1,11 @@
+<div class="banner-container">
+  <section class="banner-content">
+    <ul class="no-list">
+      <% @banners.each do |banner| %>
+        <li>
+          <%= image_tag(banner[:image], title: banner[:caption]) %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</div>
