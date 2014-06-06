@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  resources :banners
+
+  root 'home#index'
 
   resources :zombies
 

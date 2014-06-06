@@ -1,0 +1,23 @@
+.lfloat{
+  float: left;
+}
+
+.rfloat{
+  float: right;
+}
+
+.no-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.clearfix{
+  &:before, &:after{
+    content: " ";
+    display:  table;
+  }
+  &:after{
+    clear: both;
+  }
+}

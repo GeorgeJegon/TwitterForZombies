@@ -9,12 +9,12 @@
 <body>
 
 <div class="header-container">
-  <section class="header-content">
-    <div class="logo-header">
+  <section class="header-content clearfix">
+    <div class="logo-header lfloat">
       <h1><%= link_to("Logo Here", controller: "home", action: "index") %></h1>
     </div>
 
-    <div class="login-header">
+    <div class="login-header rfloat">
       <%= form_tag("/login", method: "post") do %>
         <div class="input-form">
           <%= label_tag(:user) %><br />
@@ -27,9 +27,6 @@
         <%= submit_tag("Entrar") %>
       <% end %>
     </div>
-
-
-
   </section>
 </div>
 

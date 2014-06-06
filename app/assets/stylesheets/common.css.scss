@@ -1,19 +1,6 @@
-.lfloat{
-  float: left;
-}
-
-.rfloat{
-  float: right;
-}
-
-.clearfix{
-  &:before, &:after{
-    content: " ";
-    display:  table;
-  }
-  &:after{
-    clear: both;
-  }
+body{
+  margin: 0;
+  padding: 0;
 }
 
 .main{
@@ -26,7 +13,6 @@
 .header-container{
   .header-content{
     @extend .main;
-    height:  80px;
     .logo-header{
 
     }
@@ -36,7 +22,41 @@
   }
 }
 
+/* BANNER */
+.banner-container{
+  .banner-content{
+    @extend .main;
+  }
+}
+
 /* MAIN CONTENT */
 .main-content{
   @extend .main;
+}
+
+/* FOOTER */
+.footer-container{
+  background-color: #e2e2e2;
+  .footer-content{
+    @extend .main;
+    .box-author{
+      .author-image{
+        width:150px;
+        img{
+          border-radius: 100%;
+          border: solid 5px #fff;
+        }
+
+      }
+      .author-info{
+        margin: 50px 0 0 170px;
+        .name{
+
+        }
+        .brief{
+
+        }
+      }
+    }
+  }
 }

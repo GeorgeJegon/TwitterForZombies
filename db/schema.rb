@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140606173103) do
+ActiveRecord::Schema.define(version: 20140606190541) do
+
+  create_table "banners", force: true do |t|
+    t.string   "title"
+    t.string   "image"
+    t.boolean  "status"
+    t.string   "caption"
+    t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "zombies", force: true do |t|
     t.string   "name"
