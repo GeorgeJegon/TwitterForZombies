@@ -1,0 +1,42 @@
+.lfloat{
+  float: left;
+}
+
+.rfloat{
+  float: right;
+}
+
+.clearfix{
+  &:before, &:after{
+    content: " ";
+    display:  table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+.main{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* HEADER */
+.header-container{
+  .header-content{
+    @extend .main;
+    height:  80px;
+    .logo-header{
+
+    }
+    .login-header{
+
+    }
+  }
+}
+
+/* MAIN CONTENT */
+.main-content{
+  @extend .main;
+}
