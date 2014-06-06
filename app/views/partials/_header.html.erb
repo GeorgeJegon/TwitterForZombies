@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwitterForZombies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="header-container">
+  <section class="header-content">
+    <div class="logo-header">
+      <h1><%= link_to("Logo Here", controller: "home", action: "index") %></h1>
+    </div>
+
+    <div class="login-header">
+      <%= form_tag("/login", method: "post") do %>
+        <div class="input-form">
+          <%= label_tag(:user) %><br />
+          <%= text_field_tag(:user) %>
+        </div>
+        <div class="input-form">
+          <%= label_tag(:pass) %><br />
+          <%= password_field_tag(:pass) %>
+        </div>
+        <%= submit_tag("Entrar") %>
+      <% end %>
+    </div>
+
+
+
+  </section>
+</div>
+
+<%= render "partials/banner" if current_page?(controller: "home", action: "index")%>
