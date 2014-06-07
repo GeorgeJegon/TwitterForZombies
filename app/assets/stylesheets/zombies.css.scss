@@ -2,11 +2,9 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-.box-team{
-  #list-team{
-    margin: -10px -26px 0;
-    .zombie-profile{
-      margin:10px 26px 0;
-    }
+.list-zombies{
+  margin: -10px -26px 0;
+  .zombie-profile{
+    margin:10px 26px 0;
   }
 }

@@ -1,0 +1,12 @@
+<div class="list-zombies clearfix">
+  <% @zombies.each do |zombie| %>
+    <article class="zombie-profile lfloat">
+        <p><%= zombie[:name] %></p>
+        <div class="image">
+          <%= link_to(zombie_path(zombie)) do %>
+            <%= image_tag(zombie[:image]) %>
+          <% end %>
+        </div>
+    </article>
+  <% end %>
+</div>
