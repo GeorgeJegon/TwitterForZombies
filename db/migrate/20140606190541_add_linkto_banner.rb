@@ -1,5 +1,5 @@
 class AddLinktoBanner < ActiveRecord::Migration
   def change
-    add_column :banner, :link, :string
+    add_column :banners, :link, :string
   end
 end

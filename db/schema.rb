@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140606190541) do
     t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "link"
   end
 
   create_table "zombies", force: true do |t|
