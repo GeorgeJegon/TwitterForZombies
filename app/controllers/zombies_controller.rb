@@ -4,7 +4,7 @@ class ZombiesController < ApplicationController
   # GET /zombies
   # GET /zombies.json
   def index
-    @zombies = Zombie.all
+    @zombies = Zombie.active.paginate(page: params[:page], per_page: 15)
   end
 
   # GET /zombies/1

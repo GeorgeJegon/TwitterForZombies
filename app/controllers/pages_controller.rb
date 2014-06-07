@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @banners = Banner.active(5)
+    @banners = Banner.list_home(5)
     @zombies = Zombie.active(5)
   end
 end
