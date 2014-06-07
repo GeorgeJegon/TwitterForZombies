@@ -1,9 +1,11 @@
 <div class="banner-container">
   <section class="banner-content">
-    <ul class="no-list">
+    <ul class="slideshow no-list">
       <% @banners.each do |banner| %>
         <li>
-          <%= image_tag(banner[:image], title: banner[:caption]) %>
+          <%= link_to(banner[:link], target: "_blank") do %>
+            <%= image_tag(banner[:image], title: banner[:caption]) %>
+          <% end %>
         </li>
       <% end %>
     </ul>
