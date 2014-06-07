@@ -11,7 +11,7 @@
 <div class="header-container">
   <section class="header-content clearfix">
     <div class="logo-header lfloat">
-      <h1><%= link_to("Logo Here", controller: "home", action: "index") %></h1>
+      <h1><%= link_to("Logo Here", :root) %></h1>
     </div>
 
     <div class="login-header rfloat">
@@ -30,4 +30,4 @@
   </section>
 </div>
 
-<%= render "partials/banner" if current_page?(controller: "home", action: "index")%>
+<%= render "partials/banner" if current_page?(:root)%>

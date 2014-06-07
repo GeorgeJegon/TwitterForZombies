@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :banners
 
-  root 'home#index'
+  root 'pages#index'
 
   resources :zombies
 
