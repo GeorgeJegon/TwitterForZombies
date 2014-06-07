@@ -11,10 +11,13 @@ body{
 
 /* HEADER */
 .header-container{
+  background-color: #000;
   .header-content{
     @extend .main;
     .logo-header{
-
+      a{
+        color: #fff;
+      }
     }
     .login-header{
 
@@ -26,6 +29,10 @@ body{
 .banner-container{
   .banner-content{
     @extend .main;
+    .slideshow{
+      overflow: hidden;
+      height:  300px;
+    }
   }
 }
 
@@ -51,11 +58,15 @@ body{
       .author-info{
         margin: 50px 0 0 170px;
         .name{
-
+          font-weight: 700;
         }
-        .brief{
-
-        }
+      }
+    }
+    .location-map{
+      margin-left: 80px;
+      img{
+        border: solid 5px #ccc;
+        border-radius: 5px;
       }
     }
   }
