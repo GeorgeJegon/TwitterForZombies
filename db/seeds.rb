@@ -6,10 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Zombie.delete_all
-Banner.delete_all
-
-
 Zombie.create!([
   {name: "George", age: 21, email: "george@zombie.com", password: "123456", status: true, image: "http://placehold.it/150x150"},
   {name: "Arthur", age: 43, email: "arthur@zombie.com", password: "123456abcd", status: true, image: "http://placehold.it/150x150"},
