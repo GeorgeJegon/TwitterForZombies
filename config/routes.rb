@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :banners
 
   root 'pages#index'
 
+  get "zombies(/p/:page)", to: "zombies#index"
   resources :zombies
 
   # The priority is based upon order of creation: first created -> highest priority.
