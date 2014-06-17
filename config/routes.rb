@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+
+  resources :user_sessions
+  get 'user_sessions/new'
+
+  get 'user_sessions/create'
+
+  get 'user_sessions/destroy'
+
+  resources :orders do
+    resources :order_items
+  end
+
+  resources :clients
+
+
+
+  resources :categories
+
+  resources :products do
+    resources :product_images
+  end
+
+
+
   resources :users
 
   resources :banners
