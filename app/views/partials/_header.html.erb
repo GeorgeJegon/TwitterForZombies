@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TwitterForZombies</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<div class="header-container">
-  <section class="header-content clearfix">
-    <div class="logo-header lfloat">
-      <h1><%= link_to("Logo Here", root_path) %></h1>
-    </div>
-
-    <div class="login-header rfloat">
-      <%= form_tag("/login", method: "post") do %>
-        <div class="input-form">
-          <%= label_tag(:user) %><br />
-          <%= text_field_tag(:user) %>
-        </div>
-        <div class="input-form">
-          <%= label_tag(:pass) %><br />
-          <%= password_field_tag(:pass) %>
-        </div>
+<header>
+  <div class="header-content">
+    <%= link_to(root_path) do %>
+      <h1>Logo Here</h1>
+    <% end %>
+    <%= form_tag("/login", method: "post") do %>
+      <fieldset class="inputs">
+        <ol>
+          <li>
+            <%= label_tag(:user) %><br />
+            <%= text_field_tag(:user) %>
+          </li>
+          <li>
+            <%= label_tag(:pass) %><br />
+            <%= password_field_tag(:pass) %>
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset class="actions">
         <%= submit_tag("Entrar") %>
-      <% end %>
-    </div>
-  </section>
-</div>
+      </fieldset>
+    <% end %>
+  </div>
+</header>
 
 <%= render "partials/banner" if current_page?(root_path)%>

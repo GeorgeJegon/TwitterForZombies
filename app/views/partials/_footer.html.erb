@@ -1,19 +1,13 @@
-  <div class="footer-container">
-    <section class="footer-content clearfix">
-      <div class="box-author lfloat clearfix">
-        <div class="author-image lfloat">
-          <%= image_tag("http://lorempixel.com/150/150/") %>
-        </div>
+<footer>
+  <div class="footer-content">
+    <div class="author">
+        <%= image_tag("http://lorempixel.com/150/150/") %>
         <div class="author-info">
-          <p class="name">Author Name</p>
+          <span class="name">Author Name</span>
           <p class"brief">Some author briefing</p>
         </div>
-      </div>
-
-      <div class="location-map lfloat">
-        <%= image_tag("google-maps.jpg") %>
-      </div>
-    </section>
+    </div>
+    <%= image_tag("google-maps.jpg", class: "location-map") %>
   </div>
-</body>
-</html>
+</footer>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
