@@ -1,5 +1,15 @@
-<%= render "partials/header" %>
-<div class="main-content">
-  <%= yield %>
-</div>
-<%= render "partials/footer" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwitterForZombies</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render "partials/header" %>
+  <div class="main-content">
+    <%= yield %>
+  </div>
+  <%= render "partials/footer" %>
+</body>
+</html>
