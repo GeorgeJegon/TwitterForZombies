@@ -1,36 +1,26 @@
 Rails.application.routes.draw do
 
-  resources :user_sessions
-  get 'user_sessions/new'
+  root 'pages#index'
 
-  get 'user_sessions/create'
+  get "/logout", to: "user_sessions#destroy", as:  "logout_user"
+  get "/login", to: "user_sessions#new", as:  "login_user"
 
-  get 'user_sessions/destroy'
+  resources :users
+  resources :banners
+  resources :clients
+  resources :categories
+  resources :user_sessions, only: [:new, :create, :destroy]
+
+  get "zombies(/p/:page)", to: "zombies#index"
+  resources :zombies
 
   resources :orders do
     resources :order_items
   end
 
-  resources :clients
-
-
-
-  resources :categories
-
   resources :products do
     resources :product_images
   end
-
-
-
-  resources :users
-
-  resources :banners
-
-  root 'pages#index'
-
-  get "zombies(/p/:page)", to: "zombies#index"
-  resources :zombies
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
