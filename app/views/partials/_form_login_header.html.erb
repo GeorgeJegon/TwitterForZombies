@@ -1,0 +1,17 @@
+<%= form_tag("/login", method: "post") do %>
+  <fieldset class="inputs">
+    <ol>
+      <li>
+        <%= label_tag(:user) %><br />
+        <%= text_field_tag(:user) %>
+      </li>
+      <li>
+        <%= label_tag(:pass) %><br />
+        <%= password_field_tag(:pass) %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset class="actions">
+    <%= submit_tag("Entrar") %>
+  </fieldset>
+<% end %>
